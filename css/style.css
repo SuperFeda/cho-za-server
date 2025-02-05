@@ -8,6 +8,7 @@ body.dark {
   --nunito: "Nunito";
   --unbounded: "Unbounded", sans-serif;
   --text-color: white;
+  --element-bg-rgb: 31, 30, 32;
   --bg-color: 17, 16, 19;
   --telegram-color: 0, 174, 237;
   --vk-color: 0, 119, 255;
@@ -91,6 +92,12 @@ main {
   outline: none;
   border: none;
   padding: 5px 12px;
+  background: rgb(43, 43, 43);
+  cursor: pointer;
+  transition: all 0.35s;
+}
+.gray-btn:hover {
+  background: rgb(55, 55, 55);
 }
 
 .transparent-btn {
@@ -119,6 +126,18 @@ main {
   position: relative;
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 18;
   right: 6px;
+}
+
+.select-menu {
+  padding: 6px 10px;
+  border: none;
+  outline: 1px solid transparent;
+  transition: all 0.35s;
+  background: #3a3a3a;
+  color: var(--text-color);
+}
+.select-menu:focus {
+  outline: 1px solid red;
 }
 
 *,
@@ -232,14 +251,13 @@ svg * {
 #footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   padding: 15px;
-  background: rgba(58, 58, 58, 0.35);
-  border: 1px solid rgba(58, 58, 58, 0.45);
+  background: rgba(var(--element-bg-rgb), 0.7);
+  border: 1px solid rgba(var(--element-bg-rgb), 0.1);
   margin-bottom: 9px;
-}
-
-.footer-column {
-  max-width: 350px;
+  margin-right: 1%;
+  margin-left: 1%;
 }
 
 .footer-info {
@@ -279,12 +297,19 @@ svg * {
   align-items: center;
   padding: 10px 12px;
   top: 9px;
+  margin-right: 1%;
+  margin-left: 1%;
   position: sticky;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  background: rgba(58, 58, 58, 0.35);
-  border: 1px solid rgba(58, 58, 58, 0.45);
+  background: rgba(var(--element-bg-rgb), 0.7);
+  border: 1px solid rgba(var(--element-bg-rgb), 1);
   z-index: 9999;
+}
+
+.header-title {
+  font-family: var(--unbounded);
+  font-weight: 400;
 }
 
 .navbar-links {
@@ -304,7 +329,7 @@ svg * {
 }
 
 .auth-btn {
-  --purple-rgb: 132, 37, 230;
+  --purple-rgb: 152, 73, 241;
   font-family: inherit;
   outline: none;
   border: none;

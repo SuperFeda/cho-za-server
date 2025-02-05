@@ -6,12 +6,19 @@
     align-items: center;
     padding: 10px 12px;
     top: 9px;
+    margin-right: 1%;
+    margin-left: 1%;
     position: sticky;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
-    background: rgba(58, 58, 58, 0.35);
-    border: 1px solid rgba(58, 58, 58, 0.45);
+    background: rgba(var(--element-bg-rgb), 0.7);
+    border: 1px solid rgba(var(--element-bg-rgb), 1);
     z-index: 9999;
+}
+
+.header-title {
+    font-family: var(--unbounded);
+    font-weight: 400;
 }
 
 .navbar-links {
@@ -30,7 +37,7 @@
 }
 
 .auth-btn {
-    --purple-rgb: 132, 37, 230;
+    --purple-rgb: 152, 73, 241;
 
     font-family: inherit;
     outline: none;

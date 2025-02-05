@@ -1,0 +1,24 @@
+.top-site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  height: 170px;
+  background-image: url("../img/png/game.png");
+  background-attachment: fixed;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.top-site-title {
+  font-family: var(--unbounded);
+  font-size: 25px;
+}
+
+.top-site-desc {
+  font-size: 19px;
+}
+
+/*# sourceMappingURL=index.css.map */
