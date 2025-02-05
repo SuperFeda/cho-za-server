@@ -1,0 +1,71 @@
+@import "mixin";
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    top: 9px;
+    position: sticky;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    background: rgba(58, 58, 58, 0.35);
+    border: 1px solid rgba(58, 58, 58, 0.45);
+    z-index: 9999;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 9px;
+}
+
+.header-btns {
+    display: flex;
+    gap: 7px;
+}
+
+.header-btns > * {
+    display: inline-flex;
+    @include flexCenter();
+}
+
+.auth-btn {
+    --purple-rgb: 132, 37, 230;
+
+    font-family: inherit;
+    outline: none;
+    border: none;
+    padding: 6px 12px;
+    background: rgba(var(--purple-rgb), 0.08);
+    transition: all 0.45s;
+
+    & > span {
+        color: rgba(var(--purple-rgb), 1);
+    }
+
+    &:hover {
+        background: rgba(var(--purple-rgb), 0.15);
+    }
+}
+
+.header-btn {
+    padding: 7px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.35s;
+
+    &:hover {
+        background: rgba(51, 50, 50, 0.7);
+    }
+
+    &:hover.dark {
+        background: rgba(51, 50, 50, 0.7);
+    }
+
+    &.light {
+        background: transparent;
+    }
+}

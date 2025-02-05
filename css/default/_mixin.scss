@@ -1,0 +1,8 @@
+@mixin elementCenterMargin() {
+    margin: auto;
+}
+
+@mixin flexCenter() {
+    align-items: center;
+    justify-content: center;
+}
