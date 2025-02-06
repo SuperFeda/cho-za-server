@@ -6,3 +6,8 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin backdropFilter($filter) {
+    backdrop-filter: $filter;
+    -webkit-backdrop-filter: $filter;
+}
