@@ -1,4 +1,5 @@
 .top-site {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,11 +7,28 @@
   gap: 5px;
   margin-top: 20px;
   height: 190px;
+  overflow: hidden;
+}
+
+.top-site::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url("../img/png/game.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.top-site-title, .top-site-desc {
+  position: relative;
+  z-index: 2;
 }
 
 .top-site-title {

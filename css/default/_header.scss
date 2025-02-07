@@ -60,7 +60,7 @@
 }
 
 .header-btn {
-    padding: 6px 9px;
+    padding: 9px;
     border: none;
     outline: none;
     background: transparent;
@@ -137,7 +137,7 @@
 }
 
 @media (max-width: 820px) {
-    $adapt-menu-space: 80px;
+    $adapt-menu-space: 70px;
 
     .header-title {
         font-size: 24px;
@@ -188,7 +188,7 @@
     #adapt-btns {
         gap: 10px;
         position: absolute;
-        top: $adapt-menu-space+170px;
+        top: $adapt-menu-space+160px;
         left: 0;
         right: 0;
         background: rgba(var(--element-bg-rgb), 0.95);
@@ -205,5 +205,11 @@
                 &:hover {  background: rgba(50, 50, 50, 0.45) !important; }
             }
         }
+    }
+}
+
+@media (max-width: 575px) {
+    .header-title {
+        font-size: 21px;
     }
 }

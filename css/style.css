@@ -37,10 +37,10 @@ html, body {
 }
 
 .container {
-  margin: auto;
   max-width: 1480px;
   height: 100%;
   width: 100%;
+  margin: auto;
 }
 
 #box {
@@ -68,18 +68,6 @@ main {
 }
 .link-btn:hover {
   background: rgba(50, 50, 50, 0.45);
-}
-
-#discord-link-btn:hover {
-  background: rgb(var(--discord-color));
-}
-
-#telegram-link-btn:hover {
-  background: rgb(var(--telegram-color));
-}
-
-#youtube-link-btn:hover {
-  background: rgb(var(--youtube-color));
 }
 
 .circle-border {
@@ -161,6 +149,38 @@ main {
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
+}
+
+.discord-bg {
+  background: rgb(var(--discord-color));
+}
+
+.telegram-bg {
+  background: rgb(var(--telegram-color));
+}
+
+.youtube-bg {
+  background: rgb(var(--youtube-color));
+}
+
+.vk-bg {
+  background: rgb(var(--vk-color));
+}
+
+.discord-bg-hover:hover {
+  background: rgb(var(--discord-color));
+}
+
+.telegram-bg-hover:hover {
+  background: rgb(var(--telegram-color));
+}
+
+.youtube-bg-hover:hover {
+  background: rgb(var(--youtube-color));
+}
+
+.vk-bg-hover:hover {
+  background: rgb(var(--vk-color));
 }
 
 *,
@@ -376,7 +396,7 @@ svg * {
 }
 
 .header-btn {
-  padding: 6px 9px;
+  padding: 9px;
   border: none;
   outline: none;
   background: transparent;
@@ -474,7 +494,7 @@ svg * {
   }
   .navbar {
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 0;
     right: 0;
     background: rgba(var(--element-bg-rgb), 0.95);
@@ -492,7 +512,7 @@ svg * {
   #adapt-btns {
     gap: 10px;
     position: absolute;
-    top: 250px;
+    top: 230px;
     left: 0;
     right: 0;
     background: rgba(var(--element-bg-rgb), 0.95);
@@ -509,6 +529,11 @@ svg * {
   }
   #adapt-btns > * > button:hover {
     background: rgba(50, 50, 50, 0.45) !important;
+  }
+}
+@media (max-width: 575px) {
+  .header-title {
+    font-size: 21px;
   }
 }
 ::selection {

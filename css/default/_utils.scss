@@ -12,9 +12,6 @@
         background: rgba(50, 50, 50, 0.45);
     }
 }
-#discord-link-btn:hover { background: rgb(var(--discord-color)); }
-#telegram-link-btn:hover { background: rgb(var(--telegram-color)); }
-#youtube-link-btn:hover { background: rgb(var(--youtube-color)); }
 
 .circle-border { border-radius: 9999px; }
 .border-20 { border-radius: 20px; }
@@ -98,4 +95,36 @@
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
+}
+
+.discord-bg {
+    background: rgb(var(--discord-color));
+}
+
+.telegram-bg {
+    background: rgb(var(--telegram-color));
+}
+
+.youtube-bg {
+    background: rgb(var(--youtube-color));
+}
+
+.vk-bg {
+    background: rgb(var(--vk-color));
+}
+
+.discord-bg-hover:hover {
+    background: rgb(var(--discord-color));
+}
+
+.telegram-bg-hover:hover {
+    background: rgb(var(--telegram-color));
+}
+
+.youtube-bg-hover:hover {
+    background: rgb(var(--youtube-color));
+}
+
+.vk-bg-hover:hover {
+    background: rgb(var(--vk-color));
 }
