@@ -31,7 +31,8 @@
     padding: 5px 17px;
     background: rgb(43, 43, 43);
     cursor: pointer;
-    transition: all 0.35s;
+    transition: var(--default-transition);
+    color: white;
 
     &:hover {
         background: rgb(55, 55, 55);
@@ -42,11 +43,12 @@
     outline: none;
     border: none;
     padding: 5px 17px;
-    transition: all 0.35s;
-    background: rgba(255, 255, 255, 0.01);
+    transition: var(--default-transition);
+    background: transparent;
+    color: white;
 
     &:hover {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.02);
     }
 }
 
@@ -56,8 +58,9 @@
     border: none;
     padding: 5px 17px;
     background: rgba(var(--brand-purple-rgb), 1);
-    transition: all 0.45s;
+    transition: var(--default-transition);
     text-align: center;
+    color: white;
 
     &:hover {
         background: rgba(var(--brand-purple-rgb), 0.8);
@@ -82,7 +85,7 @@
     padding: 6px 10px;
     border: none;
     outline: 1px solid transparent;
-    transition: all 0.35s;
+    transition: var(--default-transition);
     background: #3a3a3a;
     color: var(--text-color);
 

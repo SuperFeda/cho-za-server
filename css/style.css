@@ -16,6 +16,7 @@
 
 body.light {
   --text-color: black;
+  --bg-color: ghostwhite;
 }
 
 body.dark {
@@ -32,7 +33,7 @@ html, body {
   font-family: "Nunito";
   height: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 55px;
+  scroll-padding-top: 65px;
   line-height: 1.4;
   background-color: rgb(var(--bg-color));
   color: var(--text-color);
@@ -114,7 +115,8 @@ main {
   padding: 5px 17px;
   background: rgb(43, 43, 43);
   cursor: pointer;
-  transition: all 0.35s;
+  transition: var(--default-transition);
+  color: white;
 }
 .gray-btn:hover {
   background: rgb(55, 55, 55);
@@ -124,11 +126,12 @@ main {
   outline: none;
   border: none;
   padding: 5px 17px;
-  transition: all 0.35s;
-  background: rgba(255, 255, 255, 0.01);
+  transition: var(--default-transition);
+  background: transparent;
+  color: white;
 }
 .transparent-btn:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .purple-btn {
@@ -137,8 +140,9 @@ main {
   border: none;
   padding: 5px 17px;
   background: rgba(var(--brand-purple-rgb), 1);
-  transition: all 0.45s;
+  transition: var(--default-transition);
   text-align: center;
+  color: white;
   /*&[colored-text] {
       color: rgba(var(--brand-purple-rgb), 1);
   }*/
@@ -157,7 +161,7 @@ main {
   padding: 6px 10px;
   border: none;
   outline: 1px solid transparent;
-  transition: all 0.35s;
+  transition: var(--default-transition);
   background: #3a3a3a;
   color: var(--text-color);
 }

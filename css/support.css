@@ -1,0 +1,61 @@
+.theme-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.theme-title {
+  position: absolute;
+  display: flex;
+  padding: 20px;
+  z-index: 999;
+  max-width: 180px;
+}
+
+.theme {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.theme-img {
+  filter: brightness(65%);
+  transition: all 0.65s;
+  object-fit: cover;
+}
+.theme-img:hover {
+  filter: brightness(85%);
+  scale: 1.03;
+}
+
+.questions {
+  margin-top: 20px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 15px;
+  background: rgba(var(--element-bg-rgb), 0.7);
+  border: 1px solid rgba(var(--element-bg-rgb), 1);
+}
+.question:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.Q:before,
+.A:before {
+  font-size: 20px;
+  font-family: var(--unbounded);
+}
+
+.Q:before {
+  content: "Q:";
+}
+
+.A:before {
+  content: "A:";
+}
+
+/*# sourceMappingURL=support.css.map */
