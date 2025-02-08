@@ -5,8 +5,7 @@
     border: 1px solid rgba(var(--element-bg-rgb), 1);
     padding: 15px;
     max-width: 370px;
-
-    @include marginCenter();
+    margin: 15% auto;
 }
 
 .auth-buttons {
@@ -16,7 +15,6 @@
 }
 
 .auth-title {
-    font-family: var(--unbounded);
     margin-bottom: 20px !important;
     display: flex;
 

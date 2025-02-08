@@ -10,6 +10,8 @@
   --nunito: "Nunito";
   --unbounded: "Unbounded";
   --emoji: "Flag Emoji Polyfill";
+  --brand-purple-rgb: 108, 14, 214;
+  --default-transition: all 0.35s;
 }
 
 body.light {
@@ -86,10 +88,30 @@ main {
   border-radius: 10px;
 }
 
+.unbounded-font {
+  font-family: var(--unbounded);
+}
+
+.padding-10 {
+  padding: 10px !important;
+}
+
+.padding-15 {
+  padding: 15px !important;
+}
+
+.padding-20 {
+  padding: 20px !important;
+}
+
+.padding-25 {
+  padding: 25px !important;
+}
+
 .gray-btn {
   outline: none;
   border: none;
-  padding: 5px 12px;
+  padding: 5px 17px;
   background: rgb(43, 43, 43);
   cursor: pointer;
   transition: all 0.35s;
@@ -101,23 +123,28 @@ main {
 .transparent-btn {
   outline: none;
   border: none;
-  padding: 5px 12px;
-  background: transparent;
+  padding: 5px 17px;
+  transition: all 0.35s;
+  background: rgba(255, 255, 255, 0.01);
 }
+.transparent-btn:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .purple-btn {
-  --purple-rgb: 132, 37, 230;
   font-family: inherit;
   outline: none;
   border: none;
-  padding: 6px 12px;
-  background: rgba(var(--purple-rgb), 0.12);
+  padding: 5px 17px;
+  background: rgba(var(--brand-purple-rgb), 1);
   transition: all 0.45s;
-}
-.purple-btn > span {
-  color: rgba(var(--purple-rgb), 1);
+  text-align: center;
+  /*&[colored-text] {
+      color: rgba(var(--brand-purple-rgb), 1);
+  }*/
 }
 .purple-btn:hover {
-  background: rgba(var(--purple-rgb), 0.25);
+  background: rgba(var(--brand-purple-rgb), 0.8);
 }
 
 .material-symbols-outlined {
@@ -181,6 +208,52 @@ main {
 
 .vk-bg-hover:hover {
   background: rgb(var(--vk-color));
+}
+
+.msg {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  background: rgba(var(--element-bg-rgb), 0.7);
+  border: 2px solid rgba(var(--element-bg-rgb), 1);
+}
+
+.msg-string:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.msg-icon {
+  fill: none;
+}
+.msg-icon path {
+  stroke: white;
+}
+
+.information-msg {
+  background: rgba(38, 82, 225, 0.15);
+  border: 2px solid rgb(38, 82, 225);
+}
+.information-msg .msg-icon path {
+  color: rgb(38, 82, 225);
+  stroke: rgb(38, 82, 225);
+}
+
+.warning-msg {
+  background: rgba(225, 38, 38, 0.15);
+  border: 2px solid rgb(225, 38, 38);
+}
+.warning-msg .msg-icon path {
+  color: rgb(225, 38, 38);
+  stroke: rgb(225, 38, 38);
+}
+
+.advice-msg {
+  background: rgba(85, 200, 44, 0.15);
+  border: 2px solid rgb(85, 200, 44);
+}
+.advice-msg .msg-icon path {
+  color: rgb(85, 200, 44);
+  stroke: rgb(85, 200, 44);
 }
 
 *,
@@ -322,7 +395,6 @@ svg * {
 }
 
 .footer-column-name {
-  font-family: var(--unbounded);
   margin-bottom: 10px;
   display: flex;
 }
@@ -347,21 +419,23 @@ svg * {
   margin-right: 1%;
   margin-left: 1%;
   position: sticky;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
   background: rgba(var(--element-bg-rgb), 0.7);
   border: 1px solid rgba(var(--element-bg-rgb), 1);
   z-index: 9999;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 
 .header-title {
-  font-family: var(--unbounded);
   font-weight: 400;
 }
 
 .navbar-links {
   display: flex;
   gap: 9px;
+}
+.navbar-links > * {
+  font-size: 17px;
 }
 
 .header-btns {
@@ -382,10 +456,10 @@ svg * {
   border: none;
   padding: 6px 12px;
   background: rgba(var(--purple-rgb), 0.08);
-  transition: all 0.45s;
+  transition: var(--default-transition);
 }
 .auth-btn > span {
-  color: rgba(var(--purple-rgb), 1);
+  color: rgb(var(--purple-rgb));
 }
 .auth-btn:hover {
   background: rgba(var(--purple-rgb), 0.15);
@@ -402,7 +476,7 @@ svg * {
   background: transparent;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.35s;
+  transition: var(--default-transition);
 }
 .header-btn:hover {
   background: rgba(51, 50, 50, 0.7);
@@ -410,8 +484,8 @@ svg * {
 .header-btn:hover.dark {
   background: rgba(51, 50, 50, 0.7);
 }
-.header-btn.light {
-  background: transparent;
+.header-btn:hover.light {
+  background: rgba(255, 237, 35, 0.7);
 }
 
 #currency-btn {
@@ -456,21 +530,7 @@ svg * {
   margin-right: 6px;
 }
 
-@media (max-width: 940px) {
-  .auth-btn {
-    padding: 9px;
-  }
-  #auth-btn-icon {
-    right: 0 !important;
-  }
-  .auth-btn-text {
-    display: none !important;
-  }
-}
-@media (max-width: 820px) {
-  .header-title {
-    font-size: 24px;
-  }
+@media (max-width: 1100px) {
   .dropdown-options {
     transform: translateX(0);
   }
@@ -525,10 +585,26 @@ svg * {
   #adapt-btns > * > button {
     width: 100%;
     background: rgba(50, 50, 50, 0.3) !important;
-    transition: all 0.3s;
+    transition: var(--default-transition);
   }
   #adapt-btns > * > button:hover {
     background: rgba(50, 50, 50, 0.45) !important;
+  }
+}
+@media (max-width: 940px) {
+  .auth-btn {
+    padding: 9px;
+  }
+  #auth-btn-icon {
+    right: 0 !important;
+  }
+  .auth-btn-text {
+    display: none !important;
+  }
+}
+@media (max-width: 820px) {
+  .header-title {
+    font-size: 24px;
   }
 }
 @media (max-width: 575px) {
@@ -537,7 +613,7 @@ svg * {
   }
 }
 ::selection {
-  background-color: rgb(var(--vk-color));
+  background-color: rgb(var(--brand-purple-rgb));
   color: white;
 }
 
@@ -549,11 +625,11 @@ svg * {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgb(var(--vk-color));
+  background-color: rgb(var(--brand-purple-rgb));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(var(--vk-color));
+  background-color: rgb(var(--brand-purple-rgb));
 }
 
 @media (max-width: 767px) {

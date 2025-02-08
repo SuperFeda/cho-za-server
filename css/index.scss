@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
     height: 190px;
     overflow: hidden;
 }
@@ -22,11 +22,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(2px);
+    filter: blur(2px) brightness(75%);
     z-index: 1;
 }
 
-.top-site-title, .top-site-desc {
+.top-site-title,
+.top-site-server-desc {
     position: relative;
     z-index: 2;
 }
@@ -36,6 +37,110 @@
     font-size: 25px;
 }
 
-.top-site-desc {
+.top-site-server-desc {
     font-size: 19px;
+}
+
+.top-site-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    max-width: 756px;
+
+    & > * {
+        flex: 1 1 200px;
+        padding: 17px !important;
+    }
+}
+
+.sever-game-conditions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#our-servers {
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.server-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+    gap: 10px;
+}
+
+.server {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(var(--element-bg-rgb), 0.7);
+    border: 1px solid rgba(var(--element-bg-rgb), 1);
+    padding: 13px;
+    height: 100%;
+    transition: var(--default-transition);
+
+    &:hover {
+        background: rgb(var(--element-bg-rgb));
+    }
+}
+
+.server-prev-img {
+    border: 1px solid rgba(var(--element-bg-rgb), 1);
+    min-height: 175px;
+    max-height: 175px;
+    object-fit: cover;
+    //height: 100%;
+}
+
+.server-information {
+    flex: 1 1 auto;
+    margin: 7px;
+    //max-height: 115px;
+
+    & hr {
+        margin: 8px 0;
+        border: 1px solid rgb(58, 58, 58);
+    }
+}
+
+.server-name {
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.server-parametr {
+    display: flex;
+    gap: 10px;
+
+    & span {
+        display: inline-flex;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.server-parametr-svg {
+    display: inline-flex;
+    fill: none;
+    color: rgb(var(--brand-purple-rgb));
+
+    & path {
+        stroke: rgb(var(--brand-purple-rgb));
+    }
+}
+
+.server-desc {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis
 }

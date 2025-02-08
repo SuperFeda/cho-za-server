@@ -9,21 +9,24 @@
     margin-right: 1%;
     margin-left: 1%;
     position: sticky;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
     background: rgba(var(--element-bg-rgb), 0.7);
     border: 1px solid rgba(var(--element-bg-rgb), 1);
     z-index: 9999;
+
+    @include backdropFilter(blur(7px))
 }
 
 .header-title {
-    font-family: var(--unbounded);
     font-weight: 400;
 }
 
 .navbar-links {
     display: flex;
     gap: 9px;
+
+    & > * {
+        font-size: 17px;
+    }
 }
 
 .header-btns {
@@ -44,10 +47,10 @@
     border: none;
     padding: 6px 12px;
     background: rgba(var(--purple-rgb), 0.08);
-    transition: all 0.45s;
+    transition: var(--default-transition);
 
     & > span {
-        color: rgba(var(--purple-rgb), 1);
+        color: rgb(var(--purple-rgb));
     }
 
     &:hover {
@@ -66,7 +69,7 @@
     background: transparent;
     font-size: 16px;
     cursor: pointer;
-    transition: all 0.35s;
+    transition: var(--default-transition);
 
     &:hover {
         background: rgba(51, 50, 50, 0.7);
@@ -76,8 +79,8 @@
         background: rgba(51, 50, 50, 0.7);
     }
 
-    &.light {
-        background: transparent;
+    &:hover.light {
+        background: rgba(255, 237, 35, 0.7);
     }
 }
 #currency-btn { display: inline-flex; }
@@ -121,27 +124,8 @@
 }
 
 
-
-@media (max-width: 940px) {
-    .auth-btn {
-        padding: 9px;
-    }
-
-    #auth-btn-icon {
-        right: 0 !important;
-    }
-
-    .auth-btn-text {
-        display: none !important;
-    }
-}
-
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
     $adapt-menu-space: 70px;
-
-    .header-title {
-        font-size: 24px;
-    }
 
     .dropdown-options {
         transform: translateX(0);
@@ -201,10 +185,31 @@
             & > button {
                 width: 100%;
                 background: rgba(50, 50, 50, 0.3) !important;
-                transition: all 0.3s;
-                &:hover {  background: rgba(50, 50, 50, 0.45) !important; }
+                transition: var(--default-transition);
+
+                &:hover { background: rgba(50, 50, 50, 0.45) !important; }
             }
         }
+    }
+}
+
+@media (max-width: 940px) {
+    .auth-btn {
+        padding: 9px;
+    }
+
+    #auth-btn-icon {
+        right: 0 !important;
+    }
+
+    .auth-btn-text {
+        display: none !important;
+    }
+}
+
+@media (max-width: 820px) {
+    .header-title {
+        font-size: 24px;
     }
 }
 

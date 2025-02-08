@@ -18,10 +18,17 @@
 .border-15 { border-radius: 15px; }
 .border-10 { border-radius: 10px; }
 
+.unbounded-font { font-family: var(--unbounded); }
+
+.padding-10 { padding: 10px !important; }
+.padding-15 { padding: 15px !important; }
+.padding-20 { padding: 20px !important; }
+.padding-25 { padding: 25px !important; }
+
 .gray-btn {
     outline: none;
     border: none;
-    padding: 5px 12px;
+    padding: 5px 17px;
     background: rgb(43, 43, 43);
     cursor: pointer;
     transition: all 0.35s;
@@ -34,31 +41,31 @@
 .transparent-btn {
     outline: none;
     border: none;
-    padding: 5px 12px;
-    background: transparent;
+    padding: 5px 17px;
+    transition: all 0.35s;
+    background: rgba(255, 255, 255, 0.01);
 
     &:hover {
-
+        background: rgba(255, 255, 255, 0.03);
     }
 }
 
 .purple-btn {
-    --purple-rgb: 132, 37, 230;
-
     font-family: inherit;
     outline: none;
     border: none;
-    padding: 6px 12px;
-    background: rgba(var(--purple-rgb), 0.12);
+    padding: 5px 17px;
+    background: rgba(var(--brand-purple-rgb), 1);
     transition: all 0.45s;
-
-    & > span {
-        color: rgba(var(--purple-rgb), 1);
-    }
+    text-align: center;
 
     &:hover {
-        background: rgba(var(--purple-rgb), 0.25);
+        background: rgba(var(--brand-purple-rgb), 0.8);
     }
+
+    /*&[colored-text] {
+        color: rgba(var(--brand-purple-rgb), 1);
+    }*/
 }
 
 .material-symbols-outlined {
@@ -127,4 +134,60 @@
 
 .vk-bg-hover:hover {
     background: rgb(var(--vk-color));
+}
+
+.msg {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    background: rgba(var(--element-bg-rgb), 0.7);
+    border: 2px solid rgba(var(--element-bg-rgb), 1);
+}
+
+.msg-text {
+
+}
+
+.msg-string {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.msg-icon {
+    fill: none;
+
+    & path {
+        stroke: white;
+    }
+}
+
+.information-msg {
+    background: rgba(38, 82, 225, 0.15);
+    border: 2px solid rgba(38, 82, 225, 1);
+
+    & .msg-icon path {
+        color: rgb(38, 82, 225);
+        stroke: rgb(38, 82, 225);
+    }
+}
+
+.warning-msg {
+    background: rgba(225, 38, 38, 0.15);
+    border: 2px solid rgba(225, 38, 38, 1);
+
+    & .msg-icon path {
+        color: rgb(225, 38, 38);
+        stroke: rgb(225, 38, 38);
+    }
+}
+
+.advice-msg {
+    background: rgba(85, 200, 44, 0.15);
+    border: 2px solid rgba(85, 200, 44, 1);
+
+    & .msg-icon path {
+        color: rgb(85, 200, 44);
+        stroke: rgb(85, 200, 44);
+    }
 }
