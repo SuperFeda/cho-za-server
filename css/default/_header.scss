@@ -123,6 +123,10 @@
     margin-right: 6px;
 }
 
+#adapt-btns {
+    display: flex;
+    gap: 5px;
+}
 
 @media (max-width: 1100px) {
     $adapt-menu-space: 70px;

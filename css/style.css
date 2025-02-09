@@ -93,6 +93,10 @@ main {
   font-family: var(--unbounded);
 }
 
+.padding-5 {
+  padding: 5px !important;
+}
+
 .padding-10 {
   padding: 10px !important;
 }
@@ -110,25 +114,28 @@ main {
 }
 
 .gray-btn {
-  outline: none;
-  border: none;
   padding: 5px 17px;
   background: rgb(43, 43, 43);
-  cursor: pointer;
   transition: var(--default-transition);
   color: white;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border: none;
 }
 .gray-btn:hover {
   background: rgb(55, 55, 55);
 }
 
 .transparent-btn {
-  outline: none;
-  border: none;
   padding: 5px 17px;
   transition: var(--default-transition);
   background: transparent;
   color: white;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border: none;
 }
 .transparent-btn:hover {
   background: rgba(255, 255, 255, 0.02);
@@ -136,13 +143,14 @@ main {
 
 .purple-btn {
   font-family: inherit;
-  outline: none;
-  border: none;
   padding: 5px 17px;
   background: rgba(var(--brand-purple-rgb), 1);
   transition: var(--default-transition);
-  text-align: center;
   color: white;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border: none;
   /*&[colored-text] {
       color: rgba(var(--brand-purple-rgb), 1);
   }*/
@@ -217,6 +225,7 @@ main {
 .msg {
   padding: 15px;
   display: flex;
+  flex-direction: row;
   gap: 15px;
   background: rgba(var(--element-bg-rgb), 0.7);
   border: 2px solid rgba(var(--element-bg-rgb), 1);
@@ -228,6 +237,9 @@ main {
 
 .msg-icon {
   fill: none;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
 }
 .msg-icon path {
   stroke: white;
@@ -532,6 +544,11 @@ svg * {
 
 .option-symbol {
   margin-right: 6px;
+}
+
+#adapt-btns {
+  display: flex;
+  gap: 5px;
 }
 
 @media (max-width: 1100px) {
