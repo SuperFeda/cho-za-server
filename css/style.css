@@ -277,7 +277,7 @@ main {
   overflow: hidden;
   --mouse-x: 50%;
   --mouse-y: 50%;
-  --spotlight-color: rgba(var(--brand-purple-rgb), 0.2);
+  --spotlight-color: rgba(var(--brand-purple-rgb), 0.3);
 }
 
 .spotlight::before {
