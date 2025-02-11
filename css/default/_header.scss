@@ -123,11 +123,6 @@
     margin-right: 6px;
 }
 
-#adapt-btns {
-    display: flex;
-    gap: 5px;
-}
-
 @media (max-width: 1100px) {
     $adapt-menu-space: 70px;
 
@@ -143,25 +138,24 @@
         &:hover { background: rgba(51, 50, 50, 0.75) !important; }
     }
 
-    .navbar:not(:has(.active)),
-    #adapt-btns:not(:has(.active)) {
+    .navbar:not(:has(.active)) {
         display: none;
     }
     .navbar.active {
         display: block;
     }
-    #adapt-btns.active {
-        display: flex;
-    }
 
     .navbar {
         position: absolute;
-        top: $adapt-menu-space;
+        top: 0;
         left: 0;
         right: 0;
-        background: rgba(var(--element-bg-rgb), 0.95);
-        border: 1px solid rgba(var(--element-bg-rgb), 1);
+        width: max(310px, 5%);
+        height: calc(100lvh - 30%);
+        background: rgba(var(--element-bg-rgb), 1);
         padding: 12px;
+        box-shadow: 400px 100px 1000px 1000px rgba(0, 0, 0, 0.67);
+        pointer-events: all;
 
         @include backdropFilter(blur(7px));
     }
@@ -171,29 +165,6 @@
         flex-direction: column;
         gap: 5px;
         font-size: 1.25rem;
-    }
-
-    #adapt-btns {
-        gap: 10px;
-        position: absolute;
-        top: $adapt-menu-space+160px;
-        left: 0;
-        right: 0;
-        background: rgba(var(--element-bg-rgb), 0.95);
-        border: 1px solid rgba(var(--element-bg-rgb), 1);
-        padding: 12px;
-
-        & > * {
-            flex: 1;
-
-            & > button {
-                width: 100%;
-                background: rgba(50, 50, 50, 0.3) !important;
-                transition: var(--default-transition);
-
-                &:hover { background: rgba(50, 50, 50, 0.45) !important; }
-            }
-        }
     }
 }
 

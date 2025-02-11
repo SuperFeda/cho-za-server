@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./css/index.css" />
+        <script src="./js/header_footer.js"></script>
         <script src="./js/spotlight_card.js"></script>
         <script src="./js/scripts.js"></script>
     </head>
@@ -19,39 +20,7 @@
         <div class="container">
             <div id="box">
 
-                <header id="header" class="border-20">
-                    <h1 class="header-title unbounded-font">Cho za server</h1>
-                    <nav id="header-navbar" class="navbar border-15">
-                        <ul class="navbar-links">
-                            <a href="./index.html" class="link-btn circle-border">Главная</a>
-                            <a href="#" class="link-btn circle-border">Правила</a>
-                            <a href="#" class="link-btn circle-border">О проекте</a>
-                            <a href="./support.html" class="link-btn circle-border">Поддержка</a>
-                            <a href="./test.html" class="link-btn circle-border">ТЕСТ</a>
-                        </ul>
-                    </nav>
-                    <div class="header-btns">
-                        <div id="adapt-btns" class="border-15">
-                            <div id="lang-dropdown" class="header-dropdown">
-                                <button id="lang-btn" class="header-btn circle-border"><svg fill="white" width="23" height="23" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M478.33,433.6l-90-218a22,22,0,0,0-40.67,0l-90,218a22,22,0,1,0,40.67,16.79L316.66,406H419.33l18.33,44.39A22,22,0,0,0,458,464a22,22,0,0,0,20.32-30.4ZM334.83,362,368,281.65,401.17,362Z"/><path d="M267.84,342.92a22,22,0,0,0-4.89-30.7c-.2-.15-15-11.13-36.49-34.73,39.65-53.68,62.11-114.75,71.27-143.49H330a22,22,0,0,0,0-44H214V70a22,22,0,0,0-44,0V90H54a22,22,0,0,0,0,44H251.25c-9.52,26.95-27.05,69.5-53.79,108.36-31.41-41.68-43.08-68.65-43.17-68.87a22,22,0,0,0-40.58,17c.58,1.38,14.55,34.23,52.86,83.93.92,1.19,1.83,2.35,2.74,3.51-39.24,44.35-77.74,71.86-93.85,80.74a22,22,0,1,0,21.07,38.63c2.16-1.18,48.6-26.89,101.63-85.59,22.52,24.08,38,35.44,38.93,36.1a22,22,0,0,0,30.75-4.9Z"/></svg></button>
-                                <div id="lang-options" class="dropdown-options border-15 no-display">
-                                    <button class="select-option-btn border-10"><span class="option-emoji">🇬🇧</span><span class="option-name">Английский</span></button>
-                                    <button class="select-option-btn border-10"><span class="option-emoji">🇷🇺</span><span class="option-name">Русский</span></button>
-                                </div>
-                            </div>
-                            <div id="currency-dropdown" class="header-dropdown">
-                                <button id="currency-btn" class="header-btn circle-border"><svg fill="white" width="23" height="23" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M15,2 C18.3137085,2 21,4.6862915 21,8 C21,11.2383969 18.4344251,13.8775718 15.2249383,13.9958615 L15,14 L10,14 L10,16 L14,16 C14.5522847,16 15,16.4477153 15,17 C15,17.5522847 14.5522847,18 14,18 L10,18 L10,21 C10,21.5522847 9.55228475,22 9,22 C8.44771525,22 8,21.5522847 8,21 L8,18 L4,18 C3.44771525,18 3,17.5522847 3,17 C3,16.4477153 3.44771525,16 4,16 L8,16 L8,14 L4,14 C3.44771525,14 3,13.5522847 3,13 C3,12.4871642 3.38604019,12.0644928 3.88337887,12.0067277 L4,12 L8,12 L8,3 C8,2.44771525 8.44771525,2 9,2 L15,2 Z M15,4 L10,4 L10,12 L15,12 C17.209139,12 19,10.209139 19,8 C19,5.85780461 17.3160315,4.10892112 15.1996403,4.00489531 L15,4 Z"/></svg></button>
-                                <div id="currency-options" class="dropdown-options border-15 no-display">
-                                    <button class="select-option-btn border-10"><span class="option-symbol">$</span><span class="option-name">Американский доллар</span></button>
-                                    <button class="select-option-btn border-10"><span class="option-symbol">₽</span><span class="option-name">Российский рубль</span></button>
-                                </div>
-                            </div>
-                        </div>
-                        <button id="theme-btn" class="header-btn dark circle-border"><svg fill="white" width="23" height="23" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.0672 11.8568L20.4253 11.469L21.0672 11.8568ZM12.1432 2.93276L11.7553 2.29085V2.29085L12.1432 2.93276ZM7.37554 20.013C7.017 19.8056 6.5582 19.9281 6.3508 20.2866C6.14339 20.6452 6.26591 21.104 6.62446 21.3114L7.37554 20.013ZM2.68862 17.3755C2.89602 17.7341 3.35482 17.8566 3.71337 17.6492C4.07191 17.4418 4.19443 16.983 3.98703 16.6245L2.68862 17.3755ZM21.25 12C21.25 17.1086 17.1086 21.25 12 21.25V22.75C17.9371 22.75 22.75 17.9371 22.75 12H21.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75V1.25C6.06294 1.25 1.25 6.06294 1.25 12H2.75ZM15.5 14.25C12.3244 14.25 9.75 11.6756 9.75 8.5H8.25C8.25 12.5041 11.4959 15.75 15.5 15.75V14.25ZM20.4253 11.469C19.4172 13.1373 17.5882 14.25 15.5 14.25V15.75C18.1349 15.75 20.4407 14.3439 21.7092 12.2447L20.4253 11.469ZM9.75 8.5C9.75 6.41182 10.8627 4.5828 12.531 3.57467L11.7553 2.29085C9.65609 3.5593 8.25 5.86509 8.25 8.5H9.75ZM12 2.75C11.9115 2.75 11.8077 2.71008 11.7324 2.63168C11.6686 2.56527 11.6538 2.50244 11.6503 2.47703C11.6461 2.44587 11.6482 2.35557 11.7553 2.29085L12.531 3.57467C13.0342 3.27065 13.196 2.71398 13.1368 2.27627C13.0754 1.82126 12.7166 1.25 12 1.25V2.75ZM21.7092 12.2447C21.6444 12.3518 21.5541 12.3539 21.523 12.3497C21.4976 12.3462 21.4347 12.3314 21.3683 12.2676C21.2899 12.1923 21.25 12.0885 21.25 12H22.75C22.75 11.2834 22.1787 10.9246 21.7237 10.8632C21.286 10.804 20.7293 10.9658 20.4253 11.469L21.7092 12.2447ZM12 21.25C10.3139 21.25 8.73533 20.7996 7.37554 20.013L6.62446 21.3114C8.2064 22.2265 10.0432 22.75 12 22.75V21.25ZM3.98703 16.6245C3.20043 15.2647 2.75 13.6861 2.75 12H1.25C1.25 13.9568 1.77351 15.7936 2.68862 17.3755L3.98703 16.6245Z" /></svg></button>
-                        <a href="./auth.html" id="auth-btn" class="auth-btn circle-border"><span class="material-symbols-outlined" id="auth-btn-icon">login</span><span class="auth-btn-text" id="auth-btn-text">Авторизация</span></a>
-                        <button id="burger-menu" class="header-btn circle-border"><svg stroke="white" stroke-width="2" width="23" height="23" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
-                    </div>
-                </header>
+                <header id="header" class="border-20"></header>
 
                 <main>
                     <div class="top-site border-15">
@@ -122,36 +91,7 @@
                     </div>
                 </main>
 
-                <footer id="footer" class="border-20">
-                    <ul class="footer-column">
-                        <img src="./img/png/neminecraft.png" alt="logo" class="" />
-                        <li><p class="footer-info">Not an official Minecraft product. We are in no way affiliated with or endorsed by Mojang Synergies AB, Microsoft Corporation or other rightsholders.</p></li>
-                        <li><p class="footer-info">ФАМИЛИЯ ИМЯ ОТЧЕСТВО. ИП. ИНН.</p></li>
-                    </ul>
-                    <ul class="footer-column">
-                        <h3 class="footer-column-name unbounded-font"><span class="material-symbols-outlined">folder_open</span><span>Документы</span></h3>
-                        <li class="link-btn border-10"><a href="#">Оферта</a></li>
-                        <li class="link-btn border-10"><a href="#">Политика обработки персональных данных</a></li>
-                        <li class="link-btn border-10"><a href="#">Пользовательское соглашение</a></li>
-                    </ul>
-                    <ul class="footer-column">
-                        <h3 class="footer-column-name unbounded-font"><span class="material-symbols-outlined">mail</span><span>Связь</span></h3>
-                        <li><a data-clipboard-text="MAIL" class="">support@support.ru</a></li>
-                    </ul>
-                    <ul class="footer-column">
-                        <div class="footer-social-links">
-                            <a href="#" id="discord-link-btn" class="link-btn discord-bg-hover circle-border"><svg fill="white" width="32" height="32" viewBox="0 -28.5 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-                                <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"></path>
-                            </svg></a>
-                            <a href="#" id="telegram-link-btn" class="link-btn telegram-bg-hover circle-border"><svg fill="white" width="32" height="32" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"/>
-                            </svg></a>
-                            <a href="#" id="youtube-link-btn" class="link-btn youtube-bg-hover circle-border"><svg fill="white" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.67 8.14002C19.5811 7.7973 19.4028 7.48433 19.1533 7.23309C18.9038 6.98185 18.5921 6.80134 18.25 6.71001C16.176 6.4654 14.0883 6.35517 12 6.38001C9.91174 6.35517 7.82405 6.4654 5.75001 6.71001C5.40793 6.80134 5.09622 6.98185 4.84674 7.23309C4.59725 7.48433 4.41894 7.7973 4.33001 8.14002C4.10282 9.41396 3.99236 10.706 4.00001 12C3.99198 13.3007 4.10244 14.5994 4.33001 15.88C4.42355 16.2172 4.60391 16.5239 4.85309 16.7696C5.10226 17.0153 5.41153 17.1913 5.75001 17.28C7.82405 17.5246 9.91174 17.6349 12 17.61C14.0883 17.6349 16.176 17.5246 18.25 17.28C18.5885 17.1913 18.8978 17.0153 19.1469 16.7696C19.3961 16.5239 19.5765 16.2172 19.67 15.88C19.8976 14.5994 20.008 13.3007 20 12C20.0077 10.706 19.8972 9.41396 19.67 8.14002ZM10.36 14.39V9.63001L14.55 12L10.36 14.38V14.39Z"/>
-                            </svg></a>
-                        </div>
-                    </ul>
-                </footer>
+                <footer id="footer" class="border-20"></footer>
 
             </div>
         </div>

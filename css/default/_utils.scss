@@ -205,6 +205,11 @@
     }
 }
 
+.disable-page {
+    pointer-events: none;
+    overflow: hidden;
+}
+
 
 .spotlight {
     position: relative;
