@@ -78,13 +78,13 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: rgba(var(--element-bg-rgb), 0.2);
-    border: 1px solid rgba(var(--element-bg-rgb), 1);
+    background: rgba(var(--element-rgb), 0.2);
+    border: 1px solid var(--element-border);
     height: 100%;
     transition: var(--default-transition);
 
     &:hover {
-        background: rgba(var(--element-bg-rgb), 0.3);
+        background: rgba(var(--element-rgb), 0.3);
         //scale: 1.01;
         transform: translateY(-2px);
     }
@@ -164,7 +164,7 @@
 .append-balance {
     display: flex;
     align-items: center;
-    border: 2px solid rgba(var(--element-bg-rgb), 1);
+    border: 2px solid var(--element-border);
     gap: 7px;
 
     & > * {

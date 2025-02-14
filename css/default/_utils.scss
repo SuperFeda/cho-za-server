@@ -1,3 +1,5 @@
+@import "mixin";
+
 .link-btn {
     font-family: inherit;
     padding: 6px 14px;
@@ -210,7 +212,6 @@
     overflow: hidden;
 }
 
-
 .spotlight {
     position: relative;
     overflow: hidden;
@@ -218,7 +219,6 @@
     --mouse-y: 50%;
     --spotlight-color: rgba(var(--brand-purple-rgb), 0.3);
 }
-
 .spotlight::before {
     content: "";
     position: absolute;
@@ -231,8 +231,17 @@
     transition: opacity 0.5s ease;
     pointer-events: none;
 }
-
 .spotlight:hover::before,
 .spotlight:focus-within::before {
     opacity: 0.6;
+}
+
+.button-with-svg {
+    display: flex;
+    gap: 8px;
+    color: currentColor;
+
+    &[center] {
+        @include flexCenter();
+    }
 }

@@ -8,9 +8,7 @@ addEventListener("DOMContentLoaded", () => {
     })
 
     document.getElementById("theme-btn").addEventListener("click", () => {
-        document.querySelector("body").classList.toggle("dark")
-        document.querySelector("body").classList.toggle("light")
-        // localStorage.setItem("theme", "")
+        document.getElementById("theme-options").classList.toggle("no-display")
     })
 
     // const d = document.getElementById("currency-options")

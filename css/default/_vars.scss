@@ -4,19 +4,25 @@
     --emoji: "Flag Emoji Polyfill";
     --brand-purple-rgb: 108, 14, 214; // 152, 73, 241
     --default-transition: all 0.35s;
-}
 
-body.light {
-    --text-color: black;
-    --bg-color: ghostwhite;
-}
-
-body.dark {
-    --text-color: white;
-    --element-bg-rgb: 31, 30, 32;
-    --bg-color: 17, 16, 19;
     --telegram-color: 0, 174, 237;
     --vk-color: 0, 119, 255;
     --youtube-color: 255, 0, 0;
     --discord-color: 88, 101, 242;
+}
+
+body.light {
+    --text-color: black;
+    --bg-color: 239, 239, 239;
+    --element-rgb: 221, 221, 221;
+    --element-bg: rgba(255, 255, 255, 0.9);
+    --element-border: rgba(255, 255, 255, 1);
+}
+
+body.dark {
+    --text-color: white;
+    --element-rgb: 31, 30, 32;
+    --element-bg: rgba(var(--element-rgb), 0.7);
+    --element-border: rgba(var(--element-rgb), 1);
+    --bg-color: 17, 16, 19;
 }

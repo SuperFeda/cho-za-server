@@ -9,8 +9,8 @@
     margin-right: 1%;
     margin-left: 1%;
     position: sticky;
-    background: rgba(var(--element-bg-rgb), 0.7);
-    border: 1px solid rgba(var(--element-bg-rgb), 1);
+    background: var(--element-bg);
+    border: 1px solid var(--element-border);
     z-index: 9999;
 
     @include backdropFilter(blur(7px))
@@ -23,6 +23,14 @@
 .navbar-links {
     display: flex;
     gap: 9px;
+
+    & .header-title {
+        display: none;
+    }
+
+    & hr {
+        display: none;
+    }
 
     & > * {
         font-size: 17px;
@@ -48,10 +56,7 @@
     padding: 6px 12px;
     background: rgba(var(--purple-rgb), 0.08);
     transition: var(--default-transition);
-
-    & > span {
-        color: rgb(var(--purple-rgb));
-    }
+    color: rgb(var(--purple-rgb));
 
     &:hover {
         background: rgba(var(--purple-rgb), 0.15);
@@ -83,8 +88,10 @@
         background: rgba(255, 237, 35, 0.7);
     }
 }
-#currency-btn { display: inline-flex; }
-#lang-btn { display: inline-flex; }
+
+.header-dropdown > button {
+    display: inline-flex;
+}
 
 .dropdown-options {
     display: flex;
@@ -96,8 +103,8 @@
     //left: 50%;
     transform: translateX(-30%);
     padding: 10px;
-    background: rgb(var(--element-bg-rgb));
-    max-width: 200px;
+    background: var(--element-border);
+    max-width: 220px;
 
     @include backdropFilter(blur(7px));
 }
@@ -114,13 +121,24 @@
     }
 }
 
+.select-option-btn:has(svg) {
+    display: flex;
+    gap: 7px;
+
+    svg, span {
+        display: inline-flex;
+    }
+}
+
 .option-emoji {
-    margin-right: 6px;
     font-family: var(--emoji);
+    margin-right: 6px;
 }
 
 .option-symbol {
     margin-right: 6px;
+    border-right: 2px solid rgb(43, 43, 43);
+    padding-right: 6px;
 }
 
 @media (max-width: 1100px) {
@@ -148,11 +166,11 @@
     .navbar {
         position: absolute;
         top: 0;
-        left: 0;
+        //left: 0;
         right: 0;
         width: max(310px, 5%);
         height: calc(100dvh - 30%);
-        background: rgba(var(--element-bg-rgb), 1);
+        background: var(--element-bg);
         padding: 12px;
         box-shadow: 400px 100px 1000px 1000px rgba(0, 0, 0, 0.67);
         pointer-events: all;
@@ -165,16 +183,25 @@
         flex-direction: column;
         gap: 5px;
         font-size: 1.25rem;
+
+        & .header-title {
+            display: inline-flex;
+            font-size: 1.45rem;
+            margin-bottom: 12px;
+        }
+
+        & hr {
+            display: block;
+            border: 1px solid rgb(36, 35, 37);
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
     }
 }
 
 @media (max-width: 940px) {
     .auth-btn {
         padding: 9px;
-    }
-
-    #auth-btn-icon {
-        right: 0 !important;
     }
 
     .auth-btn-text {

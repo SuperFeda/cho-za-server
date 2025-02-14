@@ -12,21 +12,26 @@
   --emoji: "Flag Emoji Polyfill";
   --brand-purple-rgb: 108, 14, 214;
   --default-transition: all 0.35s;
-}
-
-body.light {
-  --text-color: black;
-  --bg-color: ghostwhite;
-}
-
-body.dark {
-  --text-color: white;
-  --element-bg-rgb: 31, 30, 32;
-  --bg-color: 17, 16, 19;
   --telegram-color: 0, 174, 237;
   --vk-color: 0, 119, 255;
   --youtube-color: 255, 0, 0;
   --discord-color: 88, 101, 242;
+}
+
+body.light {
+  --text-color: black;
+  --bg-color: 239, 239, 239;
+  --element-rgb: 221, 221, 221;
+  --element-bg: rgba(255, 255, 255, 0.9);
+  --element-border: rgba(255, 255, 255, 1);
+}
+
+body.dark {
+  --text-color: white;
+  --element-rgb: 31, 30, 32;
+  --element-bg: rgba(var(--element-rgb), 0.7);
+  --element-border: rgba(var(--element-rgb), 1);
+  --bg-color: 17, 16, 19;
 }
 
 html, body {
@@ -303,6 +308,16 @@ main {
   opacity: 0.6;
 }
 
+.button-with-svg {
+  display: flex;
+  gap: 8px;
+  color: currentColor;
+}
+.button-with-svg[center] {
+  align-items: center;
+  justify-content: center;
+}
+
 *,
 *::before,
 *::after {
@@ -416,8 +431,8 @@ svg * {
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   gap: 20px;
   padding: 15px;
-  background: rgba(var(--element-bg-rgb), 0.7);
-  border: 1px solid rgba(var(--element-bg-rgb), 0.1);
+  background: var(--element-bg);
+  border: 1px solid var(--element-border);
   margin-bottom: 9px;
   margin-right: 1%;
   margin-left: 1%;
@@ -466,8 +481,8 @@ svg * {
   margin-right: 1%;
   margin-left: 1%;
   position: sticky;
-  background: rgba(var(--element-bg-rgb), 0.7);
-  border: 1px solid rgba(var(--element-bg-rgb), 1);
+  background: var(--element-bg);
+  border: 1px solid var(--element-border);
   z-index: 9999;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -480,6 +495,12 @@ svg * {
 .navbar-links {
   display: flex;
   gap: 9px;
+}
+.navbar-links .header-title {
+  display: none;
+}
+.navbar-links hr {
+  display: none;
 }
 .navbar-links > * {
   font-size: 17px;
@@ -504,8 +525,6 @@ svg * {
   padding: 6px 12px;
   background: rgba(var(--purple-rgb), 0.08);
   transition: var(--default-transition);
-}
-.auth-btn > span {
   color: rgb(var(--purple-rgb));
 }
 .auth-btn:hover {
@@ -535,11 +554,7 @@ svg * {
   background: rgba(255, 237, 35, 0.7);
 }
 
-#currency-btn {
-  display: inline-flex;
-}
-
-#lang-btn {
+.header-dropdown > button {
   display: inline-flex;
 }
 
@@ -551,8 +566,8 @@ svg * {
   top: 65px;
   transform: translateX(-30%);
   padding: 10px;
-  background: rgb(var(--element-bg-rgb));
-  max-width: 200px;
+  background: var(--element-border);
+  max-width: 220px;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
@@ -568,13 +583,23 @@ svg * {
   background: rgb(43, 43, 44);
 }
 
+.select-option-btn:has(svg) {
+  display: flex;
+  gap: 7px;
+}
+.select-option-btn:has(svg) svg, .select-option-btn:has(svg) span {
+  display: inline-flex;
+}
+
 .option-emoji {
-  margin-right: 6px;
   font-family: var(--emoji);
+  margin-right: 6px;
 }
 
 .option-symbol {
   margin-right: 6px;
+  border-right: 2px solid rgb(43, 43, 43);
+  padding-right: 6px;
 }
 
 @media (max-width: 1100px) {
@@ -598,11 +623,10 @@ svg * {
   .navbar {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     width: max(310px, 5%);
     height: calc(100dvh - 30%);
-    background: rgba(var(--element-bg-rgb), 1);
+    background: var(--element-bg);
     padding: 12px;
     box-shadow: 400px 100px 1000px 1000px rgba(0, 0, 0, 0.67);
     pointer-events: all;
@@ -615,13 +639,21 @@ svg * {
     gap: 5px;
     font-size: 1.25rem;
   }
+  .navbar-links .header-title {
+    display: inline-flex;
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+  }
+  .navbar-links hr {
+    display: block;
+    border: 1px solid rgb(36, 35, 37);
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 940px) {
   .auth-btn {
     padding: 9px;
-  }
-  #auth-btn-icon {
-    right: 0 !important;
   }
   .auth-btn-text {
     display: none !important;
@@ -645,14 +677,13 @@ svg * {
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
-  background-color: rgb(var(--bg-color));
+  background: rgb(var(--element-bg-rgb), 0.7);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgb(var(--brand-purple-rgb));
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgb(var(--brand-purple-rgb));
 }
@@ -661,7 +692,6 @@ svg * {
   ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-    background-color: rgb(var(--bg-color));
   }
 }
 
