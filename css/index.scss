@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 5px;
     margin-top: 15px;
     height: 190px;
@@ -60,6 +61,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #our-servers {
@@ -70,7 +72,7 @@
 
 .server-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
     gap: 10px;
 }
 
@@ -78,15 +80,14 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: rgba(var(--element-rgb), 0.2);
-    border: 1px solid var(--element-border);
+    background: var(--element-color-0_2);
+    border: 1px solid var(--element-color-1);
     height: 100%;
     transition: var(--default-transition);
 
     &:hover {
         background: rgba(var(--element-rgb), 0.3);
-        //scale: 1.01;
-        transform: translateY(-2px);
+        transform: translateY(-3px);
     }
 }
 
@@ -164,7 +165,7 @@
 .append-balance {
     display: flex;
     align-items: center;
-    border: 2px solid var(--element-border);
+    border: 2px solid var(--element-color-1);
     gap: 7px;
 
     & > * {

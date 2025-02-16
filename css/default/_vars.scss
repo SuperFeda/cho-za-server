@@ -11,18 +11,19 @@
     --discord-color: 88, 101, 242;
 }
 
+body.dark {
+    --text-color: white;
+    --element-rgb: 31, 30, 32;
+    --element-color-0_7: rgba(var(--element-rgb), 0.7);
+    --element-color-0_2: rgba(var(--element-rgb), 0.2);
+    --element-color-1: rgb(var(--element-rgb));
+    --bg-color: 17, 16, 19;
+}
+
 body.light {
     --text-color: black;
     --bg-color: 239, 239, 239;
     --element-rgb: 221, 221, 221;
-    --element-bg: rgba(255, 255, 255, 0.9);
-    --element-border: rgba(255, 255, 255, 1);
-}
-
-body.dark {
-    --text-color: white;
-    --element-rgb: 31, 30, 32;
-    --element-bg: rgba(var(--element-rgb), 0.7);
-    --element-border: rgba(var(--element-rgb), 1);
-    --bg-color: 17, 16, 19;
+    --element-color-0_7: rgba(255, 255, 255, 0.9);
+    --element-color-1: rgba(255, 255, 255, 1);
 }

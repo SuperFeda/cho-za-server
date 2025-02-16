@@ -115,6 +115,11 @@
     overflow: hidden !important;
 }
 
+.disable {
+    pointer-events: none;
+    overflow: hidden;
+}
+
 .discord-bg {
     background: rgb(var(--discord-color));
 }
@@ -205,11 +210,6 @@
         color: rgb(85, 200, 44);
         stroke: rgb(85, 200, 44);
     }
-}
-
-.disable-page {
-    pointer-events: none;
-    overflow: hidden;
 }
 
 .spotlight {
